@@ -53,7 +53,8 @@ jobs:
             set -e
             cd ~/sehat-app
 
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
 
             docker build -t sehatkita:prod .
 
